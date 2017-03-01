@@ -6,7 +6,7 @@ struct Node{
   struct Node* prev;
 };
 struct Node *head;
-int Getnewnode(x)
+struct Node* Getnewnode(x)
 {
   struct Node* newnode = (struct Node*)malloc(sizeof(struct Node));
   newnode->data = x;
@@ -28,7 +28,7 @@ void Insert(int x, int p, int n)
     return;
   }
   if(p == 1){
-    newnode->prev = head;
+    newnode->next = head;
     head = newnode;
     return;
   }

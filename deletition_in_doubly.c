@@ -23,21 +23,10 @@ void Insert(int x)
   temp->next = trav->next;
   trav->next = temp;
 }
-void error(int n)
-{
-  struct Node* error = head;
-  while(error->next != NULL){
-    if(n != error->data){
-      printf("Enter valid number ;-(");
-      return;
-    }
-  }
-}
 void Delete(int n)
 {
   int count=0,i;
   struct Node* temp = head;
-  error(n);
   while(temp->data != n){
     temp = temp->next;
     count++;

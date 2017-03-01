@@ -49,7 +49,7 @@ void swap(int x1, int x2)
   //swapping
   struct Node* swap;
   if(first1 == head){
-      first1 = second;
+      first1->next = second;
       second1->next = first;
       swap = first->next;
       first->next = second->next;
